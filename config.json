@@ -1,0 +1,22 @@
+{
+    "game_modes": [
+        {
+            "name": "Easy",
+            "width": 10,
+            "height": 10,
+            "bomb_count": 10
+        },
+        {
+            "name": "Medium",
+            "width": 16,
+            "height": 16,
+            "bomb_count": 40
+        },
+        {
+            "name": "Hard",
+            "width": 30,
+            "height": 16,
+            "bomb_count": 99
+        }
+    ]
+}
