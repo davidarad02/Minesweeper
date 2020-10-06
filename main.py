@@ -5,6 +5,7 @@ from pprint import pprint
 
 from config.config_loader import ConfigLoader
 from config.json_config_parser import JSONConfigParser
+from IO.console_input import ConsoleInput
 
 b = Board([
     [Cell(-1), Cell(1), Cell(-1)],
@@ -23,3 +24,4 @@ CONFIG_FILE_PATH = 'config.json'
 config_parser = JSONConfigParser()
 config_loader = ConfigLoader(CONFIG_FILE_PATH, config_parser)
 pprint(config_loader.load_config())
+i = ConsoleInput()

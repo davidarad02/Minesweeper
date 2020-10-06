@@ -1,8 +1,8 @@
 from typing import List
 from copy import deepcopy
 from cell import Cell, EMPTY
-from game_lost_error import GameLostError
-from game_won_error import GameWonError
+from errors.game_lost_error import GameLostError
+from errors.game_won_error import GameWonError
 
 
 class Board:
