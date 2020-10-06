@@ -1,0 +1,3 @@
+class GameWonError(Exception):
+    """Represents an event where the player has cleared out all the cells, except for the bombs."""
+    ...
