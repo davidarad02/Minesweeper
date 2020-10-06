@@ -23,5 +23,11 @@ class BoardGenerator:
             if board[y][x] != BOMB_VALUE:
                 board[y][x] = BOMB_VALUE
                 added_bombs += 1
+                deltas = [(-1, -1), (0, -1), (1, -1), (-1, 0), (1, 0), (-1, 1), (0, 1), (1, 1)]
+                add_delta = lambda position, delta: (position[0] + delta[0], position[1] + delta[1])
+                for delta in deltas:
+                    new_x, new_y = add_delta((x, y), delta)
+                    if 0 <= new_y < len(board) and 0 <= new_x < len(board[new_y]):
+                        board[new_y][new_x] += 1
         cell_board = [[Cell(val) for val in line] for line in board]
         return Board(cell_board)

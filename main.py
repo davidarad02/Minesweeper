@@ -1,11 +1,14 @@
+from IO.console_output import ConsoleOutput
+from IO.str_to_int_validator import StrToIntValidator
 from board import Board
 from board_generator import BoardGenerator
 from cell import Cell
-from pprint import pprint
 
 from config.config_loader import ConfigLoader
 from config.json_config_parser import JSONConfigParser
 from IO.console_input import ConsoleInput
+from engine import GameEngine
+from menu import Menu
 
 b = Board([
     [Cell(-1), Cell(1), Cell(-1)],
@@ -16,12 +19,21 @@ b = Board([
 ])
 
 bg = BoardGenerator()
-b2 = bg.generate_board(3, 5, 3)
-pprint(b2._board)
+b2 = bg.generate_board(10, 50, 10)
 
 CONFIG_FILE_PATH = 'config.json'
 
 config_parser = JSONConfigParser()
 config_loader = ConfigLoader(CONFIG_FILE_PATH, config_parser)
-pprint(config_loader.load_config())
+
 i = ConsoleInput()
+o = ConsoleOutput()
+engine = GameEngine(bg)
+validator = StrToIntValidator()
+menu = Menu(config_loader, engine, i, o, validator)
+# menu.run_main_menu()
+o.output_board(b2)
+b2.mark_cell(0, 0)
+o.output_board(b2)
+b2.open_cell(25, 5)
+o.output_board(b2)
