@@ -5,7 +5,7 @@ EMPTY = 0
 class Cell:
     """Represents a single cell on the minesweeper board."""
 
-    def __init__(self, value: int, opened: bool = False, marked: bool = False):
+    def __init__(self, value: int, opened: bool = False, marked: bool = False) -> None:
         """
         :param value: The value of the cell - aka how many bombs it has adjacent.
         If `value` is `BOMB_VALUE`, it is considered a bomb.

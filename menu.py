@@ -12,7 +12,7 @@ GAME_MODES = 'game_modes'
 
 class Menu:
     def __init__(self, config_loader: ConfigLoader, game_engine: GameEngine, input: BaseInput, output: BaseOutput,
-                 str_to_int_validator: StrToIntValidator):
+                 str_to_int_validator: StrToIntValidator) -> None:
         """
         :param config_loader: Used to load configuration like the game modes.
         :param game_engine: The engine used to run games.

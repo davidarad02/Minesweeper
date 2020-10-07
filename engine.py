@@ -10,7 +10,7 @@ from game_mode import GameMode
 
 
 class GameEngine:
-    def __init__(self, board_generator: BoardGenerator):
+    def __init__(self, board_generator: BoardGenerator) -> None:
         """
         :param board_generator: Used to generate new boards for new games.
         """

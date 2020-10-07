@@ -9,7 +9,7 @@ from errors.game_won_error import GameWonError
 class Board:
     """Represents the board of the game."""
 
-    def __init__(self, board_array: List[List[Cell]]):
+    def __init__(self, board_array: List[List[Cell]]) -> None:
         """
         :param board_array: The board
         """

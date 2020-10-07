@@ -1,7 +1,7 @@
 class GameMode:
     """Represents a single game mode."""
 
-    def __init__(self, name: str = None, width: int = None, height: int = None, bomb_count: int = None):
+    def __init__(self, name: str = None, width: int = None, height: int = None, bomb_count: int = None) -> None:
         """
         :param name: The name of the mode.
         :param width: The width of the board in this mode.
