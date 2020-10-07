@@ -1,19 +1,19 @@
 {
     "game_modes": [
         {
-            "name": "Easy",
+            "name": "Easy (10x10, 10 bombs)",
             "width": 10,
             "height": 10,
             "bomb_count": 10
         },
         {
-            "name": "Medium",
+            "name": "Medium (16x16, 40 bombs)",
             "width": 16,
             "height": 16,
             "bomb_count": 40
         },
         {
-            "name": "Hard",
+            "name": "Hard (30x16, 99 bombs)",
             "width": 30,
             "height": 16,
             "bomb_count": 99

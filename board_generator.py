@@ -27,7 +27,7 @@ class BoardGenerator:
                 add_delta = lambda position, delta: (position[0] + delta[0], position[1] + delta[1])
                 for delta in deltas:
                     new_x, new_y = add_delta((x, y), delta)
-                    if 0 <= new_y < len(board) and 0 <= new_x < len(board[new_y]):
+                    if 0 <= new_y < len(board) and 0 <= new_x < len(board[new_y]) and board[new_y][new_x] != BOMB_VALUE:
                         board[new_y][new_x] += 1
         cell_board = [[Cell(val) for val in line] for line in board]
         return Board(cell_board)

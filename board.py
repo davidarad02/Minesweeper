@@ -1,5 +1,6 @@
 from typing import List
 from copy import deepcopy
+
 from cell import Cell, EMPTY
 from errors.game_lost_error import GameLostError
 from errors.game_won_error import GameWonError
@@ -57,7 +58,6 @@ class Board:
 
         bomb_count = sum(c.is_bomb for line in self._board for c in line)
         closed_cell_count = sum(not c.opened for line in self._board for c in line)
-
         if bomb_count == closed_cell_count:
             raise GameWonError()
 
