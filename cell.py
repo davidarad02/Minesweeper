@@ -36,11 +36,11 @@ class Cell:
         """Check if a cell is a bomb. A bomb cell is defined as a cell with a value of `BOMB_VALUE`."""
         return self._value == BOMB_VALUE
 
-    def open(self):
+    def open(self) -> None:
         """Set the cell to be opened."""
         self._marked = False  # An open cell cannot be marked.
         self._opened = True
 
-    def mark(self):
+    def mark(self) -> None:
         """Mark or unmark a cell as a bomb. Marking a marked cell will remove the mark."""
         self._marked = not self._marked
